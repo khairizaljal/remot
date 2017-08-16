@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.teuku.Remot" version="1.0.0" versionCode="3" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>Remot</name>
+    <description>Aplikasi Remot Mobil RC By Teuku Nikmat Sidqi</description>
+    <author email="khairizal@outlook.com" href="https://fb.com/khairizalr">Khairizal</author>
+    <content src="index.html" />
+    <icon src="www/img/hdpi.png" />
+    <icon gap:platform="android" gap:qualifier="ldpi" src="www/img/hdpi.png" />
+    <icon gap:platform="android" gap:qualifier="mdpi" src="www/img/mdpi.png" />
+    <icon gap:platform="android" gap:qualifier="hdpi" src="www/img/hdpi.png" />
+    <icon gap:platform="android" gap:qualifier="xhdpi" src="www/img/xhdpi.png" />
+    <icon gap:platform="android" gap:qualifier="xxhdpi" src="www/img/xxhdpi.png" />
+    <icon gap:platform="android" gap:qualifier="xxxhdpi" src="www/img/xxxhdpi.png" />
+    <access origin="*" />
+    <gap:plugin name="cordova-plugin-whitelist" source="npm" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <preference name="permissions" value="none" />
+    <preference name="orientation" value="landscape" />
+</widget>
