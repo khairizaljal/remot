@@ -13,28 +13,11 @@
 	<link href="css/project.min.css" rel="stylesheet">
 	<!-- js -->
 	<script src="js/jquery.min.js"></script>
+	<!-- <script src="js/jquery.mobile-1.4.5.js"></script> -->
 	<script src="js/base.min.js"></script>
 	<script src="js/myclient.js"></script> 
-	<script type="text/javascript" src="js/hammer.min.js"></script>
-	<script type="text/javascript" src="js/action.js"></script>
-			
-	<!-- Update status setiap 2 detik -->
-	<!-- <script>
-		$(document).ready(function(){
-		setInterval(function(){bek_tinggai()},2000);
-		});
-		function bek_tinggai()
-		{
-			bacastatus()
-		}
-		$(document).ready(function(){
-		setInterval(function(){stat()},7000);
-		});
-		function stat()
-		{
-			cekstatus()
-		}
-	</script> -->
+	<script src="js/hammer105.js"></script>
+	<script src="js/action3.js"></script>
 	<link rel="icon" 
       type="image/png" 
       href="icon.png" />
@@ -49,13 +32,13 @@
 				</a>
 			</li>
 		</ul>
-		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix" href="index.html">Saklar @Khairizal Offline</a>
-		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">Saklar @Khairizal Offline</span>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix" href="index.html">Remot @RC Offline</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">Remot @RC Offline</span>
 		<ul class="nav nav-list pull-right">
 			<li class="dropdown margin-right">
 				<a class="dropdown-toggle padding-left-no padding-right-no" data-toggle="dropdown">
-					<span class="access-hide">Khairizal</span>
-					<span class="avatar avatar-sm"><img alt="alt text for John Smith avatar" src="images/users/me.jpg"></span>
+					<span class="access-hide">Teuku Nikmat Sidqi</span>
+					<span class="avatar avatar-sm"><img alt="alt text for John Smith avatar" src="images/users/avatar-001.jpg"></span>
 				</a>
 				<ul class="dropdown-menu">
 					<li>
@@ -75,9 +58,9 @@
 		<div class="menu-scroll">
 		
 			<div class="menu-content">
-			<a class="menu-logo"  href="index.html"><b>Saklar</b></a>
+			<a class="menu-logo"  href="index.html"><b>Remote Rc</b></a>
 			<a class="waves-attach">------</a>
-			<a class="waves-attach">by @Khairizal</a><br>
+			<a class="waves-attach">by @Teuku Nikmat Sidqi</a><br>
 			<a class="waves-attach">------</a>
 			<a class="waves-attach">Version : 1.0</a><br>
 			<a class="waves-attach">---------------------------------------------</a>
@@ -125,217 +108,43 @@
 						<div class="card">
 							<div class="card-main">
 							<div class="card-inner">
-					<div class="tab-pane fade active in" id="doc_tab_example_1">
-						<!-- ISI TAB 1 -->
-						<!-- Awai Loooooddiiiinggg -->
-						<!-- <div class="el-loading" id="loding_sambong">
-							<div class="el-loading-indicator">
-								
-								<div class="progress">
-									<div class="load-bar">
-										<div class="load-bar-base">
-											<div class="load-bar-content">
-												<div class="load-bar-progress"></div>
-												<div class="load-bar-progress load-bar-progress-brand"></div>
-												<div class="load-bar-progress load-bar-progress-green"></div>
-												<div class="load-bar-progress load-bar-progress-orange"></div>
-											</div>
-										</div>
-									</div>
-									<div class="load-bar">
-										<div class="load-bar-base">
-											<div class="load-bar-content">
-												<div class="load-bar-progress"></div>
-												<div class="load-bar-progress load-bar-progress-orange"></div>
-												<div class="load-bar-progress load-bar-progress-green"></div>
-												<div class="load-bar-progress load-bar-progress-brand"></div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<center> <a class="content-sub-heading">Menyambung Ke Server ...</a></center>
-								<div class="progress-circular progress-circular-inline">
-									<div class="progress-circular-wrapper">
-										<div class="progress-circular-inner">
-											<div class="progress-circular-left">
-												<div class="progress-circular-spinner"></div>
-											</div>
-											<div class="progress-circular-gap"></div>
-											<div class="progress-circular-right">
-												<div class="progress-circular-spinner"></div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div> -->
-							<!-- Akhir Loooooddiiiinggg -->
-							
-						<!-- Saklar 1 -->
-						<div class="card">
-							<div class="card-main">
-										<div class="col-xs-3 col-xx-6">
-										<a id="bt1" class="btn btn-brand"> jalan </a>
-										</div>
-										<div class="col-xs-3 col-xx-6">
-										<a id="bt2" class="btn btn-brand"> Mundur </a>
-										</div>
-										<div class="col-xs-3 col-xx-6">
-										<a id="bt3" class="btn btn-brand"> Kiri </a>
-										</div>
-										<div class="col-xs-3 col-xx-6">
-										<a id="bt4" class="btn btn-brand"> Kanan </a>
-										</div>
-										<div class="col-xs-3 col-xx-6">
-											
-												<label for="sw1">
-													<input class="access-hide" onclick="pencet('1')" type="checkbox" id="sw1" /><span class="switch-toggle"></span>On/Off
-												</label>
-											</div>								
-								<div class="col-xs-6 col-xx-6">
-										<div class="form-group">	
-											<p><div class="checkbox switch">
-												<label for="tmr1">
-													<input class="access-hide"  type="checkbox" onclick="pencet2('1')" id="tmr1" value="yes"><span class="switch-toggle"></span>Timer
-												</label>
-											</div>
-										</div>
-									</div>
-									<div class="col-xs-3 col-xx-6">
-										<div class="form-group">
-											<div class="checkbox switch">
-												<span class="btn btn-flat btn-brand" id="time1" align="right">00:00-00:00</span>
-											</div>
-										</div>
-									</div>
-									<div class="col-xs-3 col-xx-6">
-										<div class="form-group">
-											<div class="checkbox switch">
-												<button class="btn btn-brand waves-attach waves-light" onclick="editTimer('time1')" >Edit Timer</button>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- Saklar 2 -->
-							<div class="card ">
-							<div class="card-main ">
-								<div class="card-header card-action card-brand ">
-									<div class="card-inner ">
-										<h3 class="h5 margin-bottom-no margin-top-no col-xs-3 col-xx-6">Saklar 2</h3>
-											<div class="col-xs-3 col-xx-6">
-												<label for="sw2">
-													<input class="access-hide" onclick="pencet('2')" type="checkbox" id="sw2" /><span class="switch-toggle"></span>On/Off
-												</label>
-											</div>
-										</div>
-									</div>
-								
-									<div class="col-xs-6 col-xx-6">
-										<div class="form-group">	
-											<p><div class="checkbox switch">
-												<label for="tmr2">
-													<input class="access-hide"  type="checkbox" onclick="pencet2('2')" id="tmr2" value="yes"><span class="switch-toggle"></span>Timer
-												</label>
-											</div>
-										</div>
-									</div>
-									<div class="col-xs-3 col-xx-6">
-										<div class="form-group">
-											<div class="checkbox switch">
-												<span class="btn btn-flat btn-brand" id="time2" align="right">00:00-00:00</span>
-											</div>
-										</div>
-									</div>
-									<div class="col-xs-3 col-xx-6">
-										<div class="form-group">
-											<div class="checkbox switch">
-												<button class="btn btn-brand waves-attach waves-light" onclick="editTimer('time2')" >Edit Timer</button>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- Saklar 3 -->
 							<div class="card">
-							<div class="card-main">
-								<div class="card-header card-action card-brand">
-									<div class="card-inner">
-										<h3 class="h5 margin-bottom-no margin-top-no col-xs-3 col-xx-6">Saklar 3</h3>
-											<div class="col-xs-3 col-xx-6">
-												<label for="sw3">
-													<input class="access-hide" onclick="pencet('3')" type="checkbox" id="sw3" /><span class="switch-toggle"></span>On/Off
-												</label>
-											</div>
-										</div>
-									</div>
-								
-									<div class="col-xs-6 col-xx-6">
-										<div class="form-group">	
-											<p><div class="checkbox switch">
-												<label for="tmr3">
-													<input class="access-hide"  type="checkbox" onclick="pencet2('3')" id="tmr3" value="yes"><span class="switch-toggle"></span>Timer
-												</label>
-											</div>
-										</div>
-									</div>
-									<div class="col-xs-3 col-xx-6">
-										<div class="form-group">
-											<div class="checkbox switch">
-												<span class="btn btn-flat btn-brand" id="time3" align="right">00:00-00:00</span>
-											</div>
-										</div>
-									</div>
-									<div class="col-xs-3 col-xx-6">
-										<div class="form-group">
-											<div class="checkbox switch">
-												<button class="btn btn-brand waves-attach waves-light" onclick="editTimer('time3')" >Edit Timer</button>
-											</div>
-										</div>
-									</div>
+							<!-- INFRAME REMOT -->
+							<div style="touch-action: none;" class="card-main">
+									<pre>&lt;RENCANA DISINI INFRAME VIDEO CAMERA&gt;
+</pre>
 								</div>
+							<!-- Akhir INFRAME -->
 							</div>
-							<!-- Saklar 4 -->
 							<div class="card">
-							<div class="card-main">
-								<div class="card-header card-action card-brand">
-									<div class="card-inner">
-										<h3 class="h5 margin-bottom-no margin-top-no col-xs-3 col-xx-6">Saklar 4</h3>
-											<div class="col-xs-3 col-xx-6">
-												<label for="sw4">
-													<input class="access-hide" onclick="pencet('4')" type="checkbox" id="sw4" /><span class="switch-toggle"></span>On/Off
-												</label>
-											</div>
+							<!-- PUSAT KONTROL REMOT -->
+							<div style="touch-action: none;" class="card-main">
+									<div style="touch-action: none;" class="row">
+										<div style="touch-action: none;" class="col-xx-6">
+											<p class="margin-top-no"><a id="bt1" class="btn btn-brand"
+												onmousedown="press1()" onmouseup="release1()"
+												ontouchstart="press1()" ontouchend="release1()"><img src="icon/wjalan.png"></a></p>
 										</div>
-									</div>
-								
-									<div class="col-xs-6 col-xx-6">
-										<div class="form-group">	
-											<p><div class="checkbox switch">
-												<label for="tmr4">
-													<input class="access-hide"  type="checkbox" onclick="pencet2('4')" id="tmr4" value="yes"><span class="switch-toggle"></span>Timer
-												</label>
-											</div>
+										<div style="touch-action: none;" class="col-xx-6">
+											<p class="margin-top-no"><a id="bt3" class="btn btn-brand"
+												onmousedown="press3()" onmouseup="release3()"
+												ontouchstart="press3()" ontouchend="release3()"><img src="icon/wkiri.png"></a></p>
 										</div>
-									</div>
-									<div class="col-xs-3 col-xx-6">
-										<div class="form-group">
-											<div class="checkbox switch">
-												<span class="btn btn-flat btn-brand" id="time4" align="right">00:00-00:00</span>
-											</div>
+										<div style="touch-action: none;" class="col-xx-6">
+											<p class="margin-top-no"><a id="bt2" class="btn btn-brand"
+												onmousedown="press2()" onmouseup="release2()"
+												ontouchstart="press2()" ontouchend="release2()"><img src="icon/wmundur.png"></a></p>
 										</div>
-									</div>
-									<div class="col-xs-3 col-xx-6">
-										<div class="form-group">
-											<div class="checkbox switch">
-												<button class="btn btn-brand waves-attach waves-light" onclick="editTimer('time4')" >Edit Timer</button>
-											</div>
+										<div style="touch-action: none;" class="col-xx-6">
+											<p class="margin-top-no"><a id="bt4" class="btn btn-brand"
+												onmousedown="press4()" onmouseup="release4()"
+												ontouchstart="press4()" ontouchend="release4()"><img src="icon/wkanan.png"></a></p>
 										</div>
 									</div>
 								</div>
+							<!-- Akhir PUSAT KONTROL REMOT -->
 							</div>
-						</div> <!-- peunutop div looodinggggg -->
-					
-									</div>
+						</div>
 								</div>
 							</div>
 						</div>
@@ -346,7 +155,7 @@
 	</main>
 	<footer class="footer">
 		<div class="container">
-			<p>Copyright Khairizal 2016</p>
+			<p>Copyright Teuku Nikmat Sidqi 2017</p>
 		</div>
 	</footer>
 	<div class="fbtn-container">
@@ -368,11 +177,11 @@
 					<center> <h2 class="modal-title">Tentang</h2></center>
 				</div>
 				<div class="modal-inner">
-					<p>saklarku adalah aplikasi remote control untuk mengendalikan saklar/relay yang terhubung pada GPIO di perangkat berbasis OpenWRT. </p>
+					<p>Remote @RC adalah aplikasi remote control untuk mengendalikan Mobil RC terhubung pada GPIO di perangkat berbasis OpenWRT. </p>
 					<p>Aplikasi ini dibuat untuk memenuhi tugas akhir </p>
 					<br>
 					<br>
-					<center> <a class="btn btn-brand  waves-attach waves-light">Copyright Khairizal 2016 -- Version : 1.0</a></center>
+					<center> <a class="btn btn-brand  waves-attach waves-light">Copyright Teuku Nikmat Sidqi 2017 -- Version : 1.0</a></center>
 					
 				</div>
 				
@@ -382,5 +191,9 @@
 
 	<!-- js for doc -->
 	<script src="js/project.min.js"></script>
+	<script src="js/touchmulator.js"></script>
+<script> TouchEmulator(); </script>
+<!-- <script src='js/hammer105.js'></script> -->
+
 </body>
 </html>
