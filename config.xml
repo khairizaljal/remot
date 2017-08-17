@@ -22,7 +22,7 @@
   <engine name="android" spec="~4.1.1" />
   
   <preference name="permissions" value="none"/>
-  <preference name="orientation" value="landscape" />
+  <preference name="orientation" value="potrait" />
   
   <!--
       Define access to external domains.
