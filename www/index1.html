@@ -1,0 +1,103 @@
+<html>
+<head>
+    <title>Custom Button</title>
+    <meta name="viewport" content="width=300" />
+    <meta name="viewport" content="initial-scale=2" />
+    <style>
+        .myButton {
+            position: relative;
+            top: -60px;
+            left: 10px;
+            border: 4px outset #c0c0c0;
+            background-color: #e0e0e0;
+            width: 100px;
+            padding: 10px;
+            text-align: center;
+            border-radius: 18px;
+        }
+ 
+        .mybutton.pressed {
+            border: 4px outset black;
+            background-color: #808080;
+		#ccan{
+			border: solid 1px blue; 
+			width:100%;
+        }
+    </style>
+    <script type="text/javascript">
+        var can, ctx, bt1,bt2, bt1press,bt2press;
+		var serverinduk="http://192.168.1.1" 
+ 
+        function init() {
+            bt1 = document.getElementById("bt1");
+			bt2 = document.getElementById("bt2");
+            can = document.getElementById("can");
+            ctx = can.getContext("2d");
+            but1press = 0;
+        }
+ 
+        function press1() {
+            // change state variable
+            bt1press = 1;
+            // change button style
+            bt1.className = "myButton pressed";
+            // do something on the canvas
+            xmlhttpPost("POST",serverinduk+"/cgi-bin/ajax","saklar=on&lampu=1");
+        }
+ 
+        function release1() {
+            // button 1 may or may not be pressed when mouse button comes up
+            // or touch ends.
+            // if button is pressed, release it and do something on the canvas
+            if (bt1press) {
+                bt1press = 0;
+                // revert button style
+                bt1.className = "myButton";
+                // do something on the canvas
+               	xmlhttpPost("POST",serverinduk+"/cgi-bin/ajax","saklar=off&lampu=1");
+            }
+        }
+		function press2() {
+            // change state variable
+            bt2press = 1;
+            // change button style
+            bt2.className = "myButton pressed";
+            // do something on the canvas
+            xmlhttpPost("POST",serverinduk+"/cgi-bin/ajax","saklar=on&lampu=2");
+        }
+ 
+        function release2() {
+            // button 1 may or may not be pressed when mouse button comes up
+            // or touch ends.
+            // if button is pressed, release it and do something on the canvas
+            if (bt2press) {
+                bt2press = 0;
+                // revert button style
+                bt2.className = "myButton";
+                // do something on the canvas
+                xmlhttpPost("POST",serverinduk+"/cgi-bin/ajax","saklar=off&lampu=2");
+			}
+		}
+    </script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.mobile-1.4.5.js"></script>
+	<script src="js/myclient.js"></script> 
+	<script src="js/hammer105.js"></script>
+	<script src="js/touchmulator.js"></script>
+</head>
+<body onload="init()" onmouseup="release1(),release2()" ontouchcancel="release1(),release2()">
+    <canvas id="can" class="ccan">
+    </canvas>
+    <div style="touch-action: none;" id="bt1" class="myButton"
+         onmousedown="press1()" onmouseup="release1()"
+         ontouchstart="press1()" ontouchend="release1()">
+        jalan
+    </div>
+	<div style="touch-action: none;" id="bt2" class="myButton"
+         onmousedown="press2()" onmouseup="release2()"
+         ontouchstart="press2()" ontouchend="release2()">
+        mundur
+    </div>
+	
+</body>
+</html>
