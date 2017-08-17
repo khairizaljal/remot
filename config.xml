@@ -5,7 +5,7 @@
 		id="com.teuku.Remot"
 		versionCode = "3"
 		version="1.0.0">
-  <name>Remot</name>
+  <name>Remot @RC</name>
   <description>Aplikasi Remot Mobil RC By Teuku Nikmat Sidqi</description>
   <author href="https://fb.com/khairizalr" email="khairizal@outlook.com">Khairizal</author>
   <content src="index.html"/>
